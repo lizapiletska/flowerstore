@@ -5,50 +5,31 @@
 
 <module name="Checker">
     <module name="Translation"/>
-
     <module name="FileTabCharacter">
         <property name="eachLine" value="false"/>
     </module>
-
     <module name="FileLength">
         <property name="max" value="1500"/>
     </module>
-
     <module name="LineLength">
         <property name="max" value="80"/>
         <property name="ignorePattern" value="^ *\* *[^ ]+$"/>
     </module>
 
     <module name="TreeWalker">
-
         <module name="SuppressWarnings">
-            <property name="format"
-                      value="^unchecked$|^unused$"/>
-            <property name="tokens"
-                      value="
-              CLASS_DEF,INTERFACE_DEF,ENUM_DEF,
-              ANNOTATION_DEF,ANNOTATION_FIELD_DEF,
-              ENUM_CONSTANT_DEF,METHOD_DEF,CTOR_DEF,
-              PARAMETER_DEF,VARIABLE_DEF
-          "/>
+            <property name="format" value="^unchecked$|^unused$"/>
+            <property name="tokens" value="CLASS_DEF,INTERFACE_DEF,ENUM_DEF,ANNOTATION_DEF,ANNOTATION_FIELD_DEF,ENUM_CONSTANT_DEF,METHOD_DEF,CTOR_DEF,PARAMETER_DEF,VARIABLE_DEF"/>
         </module>
-
-        <!-- =========================================================================== -->
-        <!-- Block checks                                                                -->
-        <!-- http://checkstyle.sourceforge.net/config_blocks.html                        -->
-        <!-- =========================================================================== -->
         <module name="EmptyBlock">
             <property name="option" value="text"/>
         </module>
         <module name="AvoidNestedBlocks"/>
-
         <module name="VisibilityModifier">
             <property name="publicMemberPattern" value="^SLOPE_ORDER$"/>
         </module>
-
         <module name="InterfaceIsType"/>
         <module name="MutableException"/>
-
         <module name="AvoidInlineConditionals"/>
         <module name="CovariantEquals"/>
         <module name="EmptyStatement"/>
@@ -58,8 +39,7 @@
         <module name="IllegalInstantiation"/>
         <module name="InnerAssignment"/>
         <module name="MagicNumber">
-            <property name="tokens"
-                      value="NUM_DOUBLE, NUM_FLOAT, NUM_INT, NUM_LONG"/>
+            <property name="tokens" value="NUM_DOUBLE, NUM_FLOAT, NUM_INT, NUM_LONG"/>
             <property name="ignoreNumbers" value="-1, 0, 0.5, 1, 2"/>
             <property name="ignoreHashCodeMethod" value="true"/>
         </module>
@@ -81,14 +61,10 @@
         <module name="NoFinalizer"/>
         <module name="SuperClone"/>
         <module name="SuperFinalize"/>
-
         <module name="IllegalCatch"/>
-
         <module name="IllegalType">
-            <property name="illegalClassNames"
-                      value="java.lang.Boolean, java.lang.Integer, java.lang.Double, java.lang.Float, java.lang.Character, java.lang.Long, java.lang.Short, java.lang.Byte, java.lang.Class"/>
+            <property name="illegalClassNames" value="java.lang.Boolean, java.lang.Integer, java.lang.Double, java.lang.Float, java.lang.Character, java.lang.Long, java.lang.Short, java.lang.Byte, java.lang.Class"/>
         </module>
-
         <module name="DeclarationOrder"/>
         <module name="ParameterAssignment"/>
         <module name="DefaultComesLast"/>
@@ -96,28 +72,19 @@
             <property name="reliefPattern" value="continue in next case"/>
         </module>
         <module name="OneStatementPerLine"/>
-
-
         <module name="AvoidStarImport"/>
         <module name="AvoidStaticImport"/>
-
         <module name="IllegalImport">
-            <property name="illegalPkgs"
-                      value="java.sql, sun, java.net, java.security, javax, java.applet, java.beans, java.nio, java.rmi, java.text, java.lang.reflect, java.lang.instrument"/>
+            <property name="illegalPkgs" value="java.sql, sun, java.net, java.security, javax, java.applet, java.beans, java.nio, java.rmi, java.text, java.lang.reflect, java.lang.instrument"/>
         </module>
-
         <module name="RedundantImport"/>
         <module name="UnusedImports"/>
-
         <module name="TodoComment"/>
         <module name="UpperEll"/>
         <module name="ArrayTypeStyle"/>
         <module name="OuterTypeFilename"/>
-
-
         <module name="ModifierOrder"/>
         <module name="RedundantModifier"/>
-
         <module name="ConstantName">
             <property name="format" value="^[A-Z][A-Z_]*$"/>
         </module>
@@ -130,11 +97,9 @@
         <module name="MemberName">
             <property name="format" value="^[a-z][a-zA-Z]*$"/>
         </module>
-
         <module name="MethodName">
             <property name="format" value="^[a-z][a-zA-Z]*$"/>
         </module>
-
         <module name="PackageName">
             <property name="format" value="^[a-z]+(\.[a-z][a-z]*)*$"/>
         </module>
@@ -148,15 +113,11 @@
         <module name="TypeName">
             <property name="format" value="^[A-Z][a-zA-Z]*$"/>
         </module>
-
-
-
         <module name="RegexpSinglelineJava">
             <property name="format" value="System\.exit"/>
             <property name="ignoreComments" value="true"/>
             <property name="message" value="Not permitted to call System.exit()"/>
         </module>
-
         <module name="RegexpSinglelineJava">
             <property name="format" value="Math\.pow\([^,]*, 2\)"/>
             <property name="ignoreComments" value="true"/>
@@ -167,14 +128,11 @@
             <property name="ignoreComments" value="true"/>
             <property name="message" value="Use x*x*x instead of Math.pow(x, 3)"/>
         </module>
-
         <module name="MethodLength"/>
         <module name="AnonInnerLength"/>
         <module name="ParameterNumber"/>
         <module name="OuterTypeNumber"/>
         <module name="MethodCount"/>
-
-
         <module name="GenericWhitespace"/>
         <module name="EmptyForInitializerPad"/>
         <module name="EmptyForIteratorPad"/>
@@ -188,19 +146,8 @@
         <module name="TypecastParenPad"/>
         <module name="WhitespaceAfter"/>
         <module name="WhitespaceAround">
-
-            <property name="tokens"
-                      value="ASSIGN, BAND, BAND_ASSIGN, BOR, BOR_ASSIGN, BSR,
-                   BSR_ASSIGN, BXOR, BXOR_ASSIGN, COLON,  DIV_ASSIGN,
-                   EQUAL, GE, GT, LAND, LCURLY, LE, LITERAL_ASSERT,
-                   LITERAL_CATCH, LITERAL_DO, LITERAL_ELSE, LITERAL_FINALLY,
-                   LITERAL_FOR, LITERAL_IF, LITERAL_RETURN, LITERAL_SYNCHRONIZED,
-                   LITERAL_TRY, LITERAL_WHILE, LOR, LT, MINUS_ASSIGN, MOD,
-                   MOD_ASSIGN, NOT_EQUAL, PLUS_ASSIGN, QUESTION, RCURLY,
-                   SL, SLIST, SL_ASSIGN, SR, SR_ASSIGN, STAR_ASSIGN,
-                   TYPE_EXTENSION_AND, WILDCARD_TYPE"/>
+            <property name="tokens" value="ASSIGN, BAND, BAND_ASSIGN, BOR, BOR_ASSIGN, BSR, BSR_ASSIGN, BXOR, BXOR_ASSIGN, COLON, DIV_ASSIGN, EQUAL, GE, GT, LAND, LCURLY, LE, LITERAL_ASSERT, LITERAL_CATCH, LITERAL_DO, LITERAL_ELSE, LITERAL_FINALLY, LITERAL_FOR, LITERAL_IF, LITERAL_RETURN, LITERAL_SYNCHRONIZED, LITERAL_TRY, LITERAL_WHILE, LOR, LT, MINUS_ASSIGN, MOD, MOD_ASSIGN, NOT_EQUAL, PLUS_ASSIGN, QUESTION, RCURLY, SL, SLIST, SL_ASSIGN, SR, SR_ASSIGN, STAR_ASSIGN, TYPE_EXTENSION_AND, WILDCARD_TYPE"/>
         </module>
-
         <module name="NeedBraces"/>
     </module>
 </module>
