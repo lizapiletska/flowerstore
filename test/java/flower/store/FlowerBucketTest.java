@@ -12,7 +12,6 @@ public class FlowerBucketTest {
     private static final int MAX_PRICE = 100;
     private FlowerBucket flowerBucket;
 
-
     @BeforeEach
     public void init() {
         flowerBucket = new FlowerBucket();
